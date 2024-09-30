@@ -1,0 +1,95 @@
+.bubble {
+    min-height: 560px;
+    margin: 20px 0;
+    background-image: url(photo.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+}
+ 
+.bubble span {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    position: absolute;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 -3px 5px #fff inset, 0 -10px 25px #ddf1e4 inset,
+                0 2px 2px #fff inset, 2px 0 5px #fff inset, -2px 0 5px #fff inset,
+                0 5px 25px #fff inset;
+    animation: bubble-animate 5s linear forwards;
+}
+.bubble-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 140px;
+    height: 140px;
+    border-radius: 100%;
+    box-shadow: 0 -3px 5px #fff inset, 0 -10px 25px #ddf1e4 inset,
+                0 2px 2px #fff inset, 2px 0 5px #fff inset, -2px 0 5px #fff inset,
+                0 5px 25px #fff inset;
+    position: absolute;
+    right: 40px;
+    top: 80px;
+    z-index: 2;
+}
+.bubble-logo::after {
+    content: "";
+    position: absolute;
+    top: -25px;
+    right: -16px;
+    width: 70px;
+    height: 70px;
+    border-radius: 100%;
+    box-shadow: 0 -3px 5px #fff inset, 0 -10px 25px #ddf1e4 inset,
+                0 2px 2px #fff inset, 2px 0 5px #fff inset, -2px 0 5px #fff inset,
+                0 5px 25px #fff inset;
+    opacity: 0.5;
+    z-index: 1;
+    animation: bubble-float 9s ease-in-out infinite alternate;
+}
+.bubble-logo::before {
+    content: "";
+    position: absolute;
+    top: -18px;
+    left: 40px;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    box-shadow: 0 -3px 5px #fff inset, 0 -10px 25px #ddf1e4 inset,
+                0 2px 2px #fff inset, 2px 0 5px #fff inset, -2px 0 5px #fff inset,
+                0 5px 25px #fff inset;
+    opacity: 0.6;
+    z-index: 1;
+    animation: bubble-float 5s ease-in-out infinite alternate;
+}
+.bubble-logo svg {
+    fill: #FFF;
+    width: 56px;
+    height: 56px;
+    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
+}
+@keyframes bubble-animate {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-50%, -1000%) scale(0);
+        opacity: 0;
+    }
+}
+@keyframes bubble-float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-30px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
