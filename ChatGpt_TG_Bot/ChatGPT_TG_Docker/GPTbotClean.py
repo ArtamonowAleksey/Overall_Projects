@@ -13,7 +13,7 @@ bot = telebot.TeleBot(TG_token)
 
 # Параметры подключения к ChatGPT
 
-openai_token = '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'
+openai_token = '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'
 
 client = OpenAI(
     # defaults to os.environ.get("OPENAI_API_KEY")
