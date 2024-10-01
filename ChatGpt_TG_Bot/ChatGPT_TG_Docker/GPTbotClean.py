@@ -1,19 +1,22 @@
 from openai import OpenAI
 import telebot
 from telebot import types
-import re
-import datetime as dt
-import json
+import configparser
+
+#Чтение файла конфигурации
+
+config = configparser.ConfigParser()
+config.read('/Users/aleksey.artamonov/Notebooks/Overall_Projects/ChatGpt_TG_Bot/ChatGPT_TG_Docker/config.ini')
 
 
 # Параметры подключения к Телеграм
 
-TG_token = '8111486366:AAFaGuUpUM0M5QIcroMDqNh6EExP_8EulRk'
+TG_token = config.get('Settings', 'tg_token')
 bot = telebot.TeleBot(TG_token)
 
 # Параметры подключения к ChatGPT
 
-openai_token = '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'
+openai_token = config.get('Settings', 'openai_token')
 
 client = OpenAI(
     # defaults to os.environ.get("OPENAI_API_KEY")
