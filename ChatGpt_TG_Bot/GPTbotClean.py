@@ -6,7 +6,7 @@ import configparser
 #Чтение файла конфигурации
 
 config = configparser.ConfigParser()
-config.read('/Users/aleksey.artamonov/Notebooks/Overall_Projects/ChatGpt_TG_Bot/ChatGPT_TG_Docker/config.ini')
+config.read('/Users/aleksey.artamonov/Notebooks/Overall_Projects/ChatGpt_TG_Bot/config.ini')
 
 
 # Параметры подключения к Телеграм
