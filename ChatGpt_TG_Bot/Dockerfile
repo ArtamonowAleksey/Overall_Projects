@@ -4,7 +4,7 @@ FROM python:3.9-slim
 # Устанавливаем рабочую директорию в контейнере
 WORKDIR /app
 
-COPY requirements.txt .
+COPY requirements.txt,config.ini .
 
 RUN pip install -r requirements.txt
 
