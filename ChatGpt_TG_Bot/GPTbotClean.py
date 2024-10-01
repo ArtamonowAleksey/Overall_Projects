@@ -6,7 +6,7 @@ import configparser
 #Чтение файла конфигурации
 
 config = configparser.ConfigParser()
-config.read('/Users/aleksey.artamonov/Notebooks/Overall_Projects/config.ini')
+config.read('config.ini')
 
 
 # Параметры подключения к Телеграм
