@@ -46,7 +46,6 @@ def get_text_message(message):
     )
       
         bot.send_message(message.from_user.id, response.choices[0].message.content.strip())
-    else:
-        bot.send_message(message.from_user.id, "Я умею только в текст")
+  
 
 bot.polling(none_stop=True, interval=5)
